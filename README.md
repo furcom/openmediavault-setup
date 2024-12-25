@@ -28,7 +28,7 @@ Create systemd-link:
 ```
 vim /etc/systemd/network/10-eth0.link
 ```
-Add this:
+Add this into link:
 ```
 [Match]
 MACAddress=<mac_address_proxmox_network_interface>
@@ -45,7 +45,7 @@ Dont forget to rename interface in network config, too:
 ```
 vim /etc/network/interfaces
 ```
-Example:
+My network config as an example:
 ```
 auto lo
 iface lo inet loopback
@@ -83,23 +83,25 @@ update-initramfs -u -k all && reboot
 ```
   
 ### 1.4 - VM hardware (CPU and RAM is up to you):
-1. BIOS: OVMF (UEFI)
-2. Machine: q35
-3. Disk: VirtIO SCSI Block
-4. RAM: Choose your RAM but `disable ballooning` !!!
+1. BIOS: `OVMF (UEFI)`
+2. Machine: `q35`
+3. Disk: `VirtIO SCSI Block`
+4. RAM: `Choose your RAM but disable ballooning !!!`
 5. Add `PCI Device` with following options:
-- RAW Device: ✅ <choose_your_device> (I'm adding my SATA controller here)
+- RAW Device: `<choose_your_device> (I'm adding my SATA controller here)`
 - All functions: ✅
 - ROM-Bar: ✅
 - PCI-Express: ✅
   
 ### 1.5 - VM options:
-- Hotplugs: Uncheck `Disk`
+- Hotplug: Uncheck `Disk`
   
 ---
   
 ## 2. - OMV Setup:
+  
 ### 2.1 - Install minimal Debian without GUI, otherwise OMV won't work !!!
+  
 ### 2.2 - Install gnupg, keyring, etc. (as root):
 ```
 apt-get install --yes gnupg
@@ -111,6 +113,7 @@ wget --quiet --output-document=- https://packages.openmediavault.org/public/arch
 ```
 vim /etc/apt/sources.list.d/openmediavault.list
 ```
+Add this into repo file:
 ```
 deb [signed-by=/usr/share/keyrings/openmediavault-archive-keyring.gpg] https://packages.openmediavault.org/public sandworm main
 ```

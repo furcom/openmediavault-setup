@@ -45,7 +45,7 @@ Dont forget to rename interface in network config, too:
 ```
 vim /etc/network/interfaces
 ```
-My network config as an example:
+Network config example:
 ```
 auto lo
 iface lo inet loopback

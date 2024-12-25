@@ -98,11 +98,11 @@ update-initramfs -u -k all && reboot
   
 ---
   
-## 2. - OMV Setup:
+## 2. - OMV Setup (Every step is done with root user):
   
 ### 2.1 - Install minimal Debian without GUI, otherwise OMV won't work !!!
   
-### 2.2 - Install gnupg, keyring, etc. (as root):
+### 2.2 - Install gnupg and keyring:
 ```
 apt-get install --yes gnupg
 ```
@@ -117,7 +117,7 @@ Add this into repo file:
 ```
 deb [signed-by=/usr/share/keyrings/openmediavault-archive-keyring.gpg] https://packages.openmediavault.org/public sandworm main
 ```
-### 2.4 - Install OMV (as root):
+### 2.4 - Install OMV:
 ```
 export LANG=C.UTF-8
 export DEBIAN_FRONTEND=noninteractive

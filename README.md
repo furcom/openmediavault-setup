@@ -1,5 +1,5 @@
 # Info:
-This guide explains how to setup OMV in UEFI mode in Proxmox with a PCIe SATA controller via Proxmox PCI passthrough.
+This guide explains how I setup OMV in UEFI mode in Proxmox with a PCIe SATA controller via Proxmox PCI passthrough.
 ##### Be sure IOMMU is supported by your hardware and enabled on your Proxmox host: [https://pve.proxmox.com/wiki/PCI_Passthrough](https://pve.proxmox.com/wiki/PCI_Passthrough)
   
 ---

@@ -98,7 +98,7 @@ update-initramfs -u -k all && reboot
   
 ---
   
-## 2. - OMV Setup (Every step is done with root user):
+## 2. - OMV Setup (Every step is done as root user):
   
 ### 2.1 - Install minimal Debian without GUI, otherwise OMV won't work !!!
   

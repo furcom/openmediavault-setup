@@ -143,3 +143,14 @@ omv-firstaid
 apt update && apt upgrade -y
 ```
 3. Reboot OMV
+  
+---
+  
+### 3. - Enabling ZFS filesystem in OMV
+3.1 Install `omv-extras`:
+```
+wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash
+```
+3.2 Install `openmediavault-zfs`:
+- Go to `System` > `Plugins` > Search for `zfs` > Install `openmediavault-zfs` plugin
+- Reboot system

@@ -152,5 +152,10 @@ apt update && apt upgrade -y
 wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash
 ```
 3.2 Install `openmediavault-zfs`:
+- Go to `System` > `Plugins` > Search for `zfs` > Install `openmediavault-kernel` plugin
+- Go to `System` > `Kernel` > At top-bar click on `Proxmox` icon (looks like a download button) > Install latest Proxmox-Kernel. (Be sure it is set as default kernel after installation)
+- Go to `System` > `Update Management` > `Updates` > Install all updates, if available
+- Reboot OMV
 - Go to `System` > `Plugins` > Search for `zfs` > Install `openmediavault-zfs` plugin
-- Reboot system
+- Reboot system again
+- Done
